@@ -50,7 +50,6 @@ class Main extends Component {
 
 					<div className="container-fluid">
 						<Metrics 
-							title="App notitas"
 							total={this.state.total}
 
 						/>
@@ -58,7 +57,7 @@ class Main extends Component {
 							{/* Cards - prueba de childrens */}
 							
 							<Card
-								title="Last product in Data Dase"
+								title="Detalles de ultimo producto"
 							>
 								<div className="text-center">
 									<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: "25rem"}} src={dummy} alt="dummy" />
@@ -68,7 +67,7 @@ class Main extends Component {
 							</Card>
 	
 							<Card 
-								title="Categories in Data Base"
+								title="Categorias"
 							>
 								<div className="row">
 									<Category />

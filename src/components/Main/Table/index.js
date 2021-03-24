@@ -3,7 +3,7 @@ import React from 'react';
 const Table = ({data}) => {
     return (
         <>
-            <h1 className="h3 mb-2 text-gray-800">All the products in the Database</h1>
+            <h1 className="h3 mb-2 text-gray-800">Todos los productos</h1>
 			<div className="card shadow mb-4">
 				<div className="card-body">
 					<div className="table-responsive">
@@ -12,7 +12,13 @@ const Table = ({data}) => {
 								<tr>
 									<th>ID</th>
 									<th>Titulo</th>
-									<th>texto</th>
+									<th>Descripcion</th>
+									<th>Precio</th>
+
+									<th>Categorias</th>
+									<th>Detalle</th>
+
+
 								</tr>
 							</thead>
 							<tbody>
