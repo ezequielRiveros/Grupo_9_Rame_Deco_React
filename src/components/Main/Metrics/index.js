@@ -21,15 +21,15 @@ const Metrics = ({title, total}) => {
                     border="success"
                     text="success"
                     icon="fas fa-users"
-                    title="Cantidad de usuarios"
-                    value="$546.456"
+                    title="Cantidad de usuarios registrados"
+                    value=""
                 />
                 <Card 
                     border="warning"
                     text="warning"
                     icon="fas fa-th"
-                    title="Cantidad de categorias"
-                    value="38"
+                    title="Cantidad de categorías"
+                    value="8"
                 />
 			</div>
         </>

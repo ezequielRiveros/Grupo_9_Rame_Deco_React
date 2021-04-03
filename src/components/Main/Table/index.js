@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Table = ({data}) => {
+	console.log(data);
     return (
         <>
             <h1 className="h3 mb-2 text-gray-800">Todos los productos</h1>
@@ -11,23 +12,21 @@ const Table = ({data}) => {
 							<thead>
 								<tr>
 									<th>ID</th>
-									<th>Titulo</th>
-									<th>Descripcion</th>
-									<th>Precio</th>
-
-									<th>Categorias</th>
-									<th>Detalle</th>
+									<th>Título</th>
+									<th>Descripción</th>
+									<th>Categoría</th>
 
 
 								</tr>
 							</thead>
 							<tbody>
 								{
-									data.map((nota, i) => (
+									data.map((producto, i) => (
 										<tr key={i}>
-											<td>{nota.id}</td>
-											<td>{nota.titulo}</td>
-											<td>{nota.texto}</td>
+											<td>{producto.id}</td>
+											<td>{producto.title}</td>
+											<td>{producto.description}</td>
+											<td>{producto.category_product}</td>
 										</tr>
 									))
 								}

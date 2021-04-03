@@ -21,12 +21,12 @@ class Main extends Component {
 
 	componentDidMount () {
 		console.log('Me acabo de renderizar');
-		fetch('http://localhost:3001/api/all')
+		fetch('http://localhost:3001/api/products')
 			.then(res => res.json())
-			.then(notas => {
+			.then(products => {
 				this.setState({
-					total: notas.total,
-					data: notas.data
+					total: products.count,
+					data: products.products.rows
 				})
 			})
 			.catch((e) => {
@@ -50,6 +50,7 @@ class Main extends Component {
 
 					<div className="container-fluid">
 						<Metrics 
+							title = "Métricas del negocio"
 							total={this.state.total}
 
 						/>
@@ -67,7 +68,7 @@ class Main extends Component {
 							</Card>
 	
 							<Card 
-								title="Categorias"
+								title="Categorías"
 							>
 								<div className="row">
 									<Category />
