@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 
-const Metrics = ({title, total}) => {
+const Metrics = ({title, total, count}) => {
     return (
         <>
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
@@ -22,7 +22,7 @@ const Metrics = ({title, total}) => {
                     text="success"
                     icon="fas fa-users"
                     title="Cantidad de usuarios registrados"
-                    value=""
+                    value={count}
                 />
                 <Card 
                     border="warning"
