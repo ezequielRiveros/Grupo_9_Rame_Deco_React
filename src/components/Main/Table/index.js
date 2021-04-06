@@ -26,7 +26,7 @@ const Table = ({data}) => {
 											<td>{producto.id}</td>
 											<td>{producto.title}</td>
 											<td>{producto.description}</td>
-											<td>{producto.category_product}</td>
+											
 										</tr>
 									))
 								}

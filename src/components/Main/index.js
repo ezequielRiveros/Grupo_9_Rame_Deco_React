@@ -20,10 +20,11 @@ class Main extends Component {
 	}
 
 	componentDidMount () {
-		console.log('Me acabo de renderizar');
+		console.log("Me acabo de renderizar");
 		fetch('http://localhost:3001/api/products')
 			.then(res => res.json())
 			.then(products => {
+				console.log(this.state);
 				this.setState({
 					total: products.count,
 					data: products.products.rows

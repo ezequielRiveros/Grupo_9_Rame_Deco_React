@@ -53,7 +53,7 @@ class SideBar extends React.Component {
 						<Link 
 							url={link.url}
 							key={link.title} 
-							/*classIcon={link.classIcon} */
+							classIcon={link.classIcon}
 							title={link.title}
 							active={link.active}
 						/>
