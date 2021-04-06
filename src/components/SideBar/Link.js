@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Link = ({classIcon, title, active}) => {
+const Link = ({url, classIcon, title, active}) => {
 
     let classItem = `nav-item ${active ?? ''}`;
 
     return (
         <li className={classItem}>
-			<a className="nav-link collapsed" href="/">
+			<a className="nav-link collapsed" href={url}>
 				<i className={classIcon}></i>
 				<span>{title}</span>
 			</a>
