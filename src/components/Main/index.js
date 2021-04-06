@@ -15,7 +15,8 @@ class Main extends Component {
 		super();
 		this.state = {
 			total: 0,
-			data: []
+			data: [],
+			count: 0
 		}
 	}
 
@@ -27,6 +28,18 @@ class Main extends Component {
 				this.setState({
 					total: products.count,
 					data: products.products.rows
+				})
+			})
+			.catch((e) => {
+				console.log(e);
+			})
+
+		fetch('http://localhost:3001/api/users')
+			.then(res => res.json())
+			.then(users => {
+				this.setState({
+					count: users.count,
+					
 				})
 			})
 			.catch((e) => {
@@ -52,6 +65,7 @@ class Main extends Component {
 						<Metrics 
 							title = "Métricas del sitio"
 							total={this.state.total}
+							count ={this.state.count}
 
 						/>
 						<div className="row">
