@@ -1,5 +1,6 @@
-![Screenshot_2021-04-06 Corporate Dashboard - Admin](https://user-images.githubusercontent.com/58121395/113719701-49bfe000-96c4-11eb-83c2-47d0823dee54.png)
 # Getting Started with Create React App
+
+![Screenshot_2021-04-06 Corporate Dashboard - Admin](https://user-images.githubusercontent.com/58121395/113719701-49bfe000-96c4-11eb-83c2-47d0823dee54.png)
 
 ## Available Scripts
 
