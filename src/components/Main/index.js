@@ -16,7 +16,8 @@ class Main extends Component {
 		this.state = {
 			total: 0,
 			data: [],
-			count: 0
+			count: 0,
+			categ: 0
 		}
 	}
 
@@ -28,7 +29,8 @@ class Main extends Component {
 				console.log(this.state);
 				this.setState({
 					total: products.count,
-					data: products.products
+					data: products.products,
+					categ: Object.keys(products.countByCategory).length 
 				})
 			})
 			.catch((e) => {
@@ -67,7 +69,7 @@ class Main extends Component {
 							title = "Métricas del sitio"
 							total={this.state.total}
 							count ={this.state.count}
-
+							categ ={this.state.categ}
 						/>
 						<div className="row">
 							{/* Cards - prueba de childrens */}
