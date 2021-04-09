@@ -17,7 +17,8 @@ class Main extends Component {
 			total: 0,
 			data: [],
 			count: 0,
-			categ: 0
+			categ: 0,
+			//infoCategories: []
 		}
 	}
 
@@ -26,11 +27,12 @@ class Main extends Component {
 		fetch('http://localhost:3001/api/products')
 			.then(res => res.json())
 			.then(products => {
-				console.log(this.state);
+				//console.log(this.state);
 				this.setState({
 					total: products.count,
 					data: products.products,
-					categ: Object.keys(products.countByCategory).length 
+					categ: Object.keys(products.countByCategory).length, 
+				
 				})
 			})
 			.catch((e) => {
@@ -91,11 +93,8 @@ class Main extends Component {
 							>
 								<div className="row">
 									<Category />
-									<Category />
-									<Category />
-									<Category />
-									<Category />
-									<Category />
+									
+
 								</div>
 							</Card>
 							
@@ -109,6 +108,7 @@ class Main extends Component {
 				<Footer />
 	
 			</div>
+			
 		);
 	}
 }
