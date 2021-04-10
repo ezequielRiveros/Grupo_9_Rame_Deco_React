@@ -5,9 +5,11 @@ import Footer from './Footer';
 import Table from './Table';
 import Header from './Header';
 import Metrics from './Metrics';
+import LastProduct from './LastProduct';
 
-/* Assets */
-import dummy from './assets/images/product_dummy.svg';
+
+// bootrap js
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 
 class Main extends Component {
@@ -74,20 +76,10 @@ class Main extends Component {
 							categ ={this.state.categ}
 						/>
 						<div className="row">
-							{/* Cards - prueba de childrens */}
+							{/* Last product comoponent */}
+							<LastProduct/>
 							
-							<Card
-								title="Detalles de último producto"
-								data = {this.state.data}
-
-							>
-								<div className="text-center">
-									<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: "25rem"}} src={dummy} alt="product_image" />
-								</div>
-								<p>mjgg</p>
-								<a target="_blank" rel="nofollow" href="/">Visualizar detalle de producto</a>
-							</Card>
-	
+							{/* /Last product comoponent */}
 							<Card 
 								title="Categorías"
 							>
