@@ -18,7 +18,7 @@ class Main extends Component {
 			data: [],
 			count: 0,
 			categ: 0,
-			//infoCategories: []
+			
 		}
 	}
 
@@ -93,13 +93,13 @@ fetch('http://localhost:3001/api/products/product/last')
 							categ ={this.state.categ}
 						/>
 						<div className="row">
-							{/* Last product comoponent */}
+							{/* Last product component */}
 							<LastProduct 
 							productTitle={this.state.lastProductTitle}
 							productDescription={this.state.lastProductDescription}
 							/>
 							
-							{/* /Last product comoponent */}
+							{/* /Last product component */}
 							<Card 
 								title="Categorías"
 							>
