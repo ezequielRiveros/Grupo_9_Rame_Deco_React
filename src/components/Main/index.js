@@ -50,6 +50,25 @@ class Main extends Component {
 			.catch((e) => {
 				console.log(e);
 			})
+
+/* last product*/ 
+fetch('http://localhost:3001/api/products/product/last')
+.then(res => res.json())
+
+.then(last => {
+	this.setState({
+		lastProductTitle:last.title,
+		lastProductDescription:last.summary
+	})
+})
+.catch((e) => {
+	console.log(e);
+})
+
+/* last product*/
+
+
+
 	}
 	componentDidUpdate () {
 		console.log('Me acabo de actualizar');
@@ -75,7 +94,10 @@ class Main extends Component {
 						/>
 						<div className="row">
 							{/* Last product comoponent */}
-							<LastProduct/>
+							<LastProduct 
+							productTitle={this.state.lastProductTitle}
+							productDescription={this.state.lastProductDescription}
+							/>
 							
 							{/* /Last product comoponent */}
 							<Card 
