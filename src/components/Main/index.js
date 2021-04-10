@@ -16,8 +16,8 @@ class Main extends Component {
 			data: [],
 			count: 0,
 			categ: 0,
-			//infoCategories: []
 			lastProduct:{}
+			
 		}
 	}
 
