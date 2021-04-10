@@ -1,22 +1,13 @@
 import React from 'react';
 
-
-
-
-const LastProduct = ({productTitle,title,productDescription}) => {
+const LastProduct = ({lastProduct}) => {
     return (
-        <div className="col-lg-6 mb-4">						
-			<div className="card shadow mb-4">
-				<div className="card-header py-3">
-					<h6 className="m-0 font-weight-bold text-primary">{title}</h6>
-				</div>
-				<div className="card-body">
-	{productTitle}
-	<br></br>
-	{productDescription}
-				</div>
+		<div className="card-body">
+			<div className="text-center">
+				<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width:"25rem"}} src={lastProduct.main_image} alt="prod_img" />
 			</div>
-	    </div>
+			<h4>{lastProduct.title}</h4><br/><p>{lastProduct.product_detail}</p>
+		</div>
     );
 }
 

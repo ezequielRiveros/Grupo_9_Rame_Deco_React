@@ -8,8 +8,6 @@ import Metrics from './Metrics';
 import LastProduct from './LastProduct';
 
 
-
-
 class Main extends Component {
 	constructor () {
 		super();
@@ -19,6 +17,7 @@ class Main extends Component {
 			count: 0,
 			categ: 0,
 			//infoCategories: []
+			lastProduct:{}
 		}
 	}
 
@@ -27,7 +26,6 @@ class Main extends Component {
 		fetch('http://localhost:3001/api/products')
 			.then(res => res.json())
 			.then(products => {
-				//console.log(this.state);
 				this.setState({
 					total: products.count,
 					data: products.products,
@@ -51,21 +49,17 @@ class Main extends Component {
 				console.log(e);
 			})
 
-/* last product*/ 
-fetch('http://localhost:3001/api/products/product/last')
-.then(res => res.json())
 
-.then(last => {
-	this.setState({
-		lastProductTitle:last.title,
-		lastProductDescription:last.summary
-	})
-})
-.catch((e) => {
-	console.log(e);
-})
-
-/* last product*/
+		fetch('http://localhost:3001/api/products/last')
+			.then(res => res.json())
+			.then(last => {
+				this.setState({
+					lastProduct: last
+				})
+			})
+			.catch((e) => {
+					console.log(e);
+			})
 
 
 
@@ -73,8 +67,6 @@ fetch('http://localhost:3001/api/products/product/last')
 	componentDidUpdate () {
 		console.log('Me acabo de actualizar');
 	}
-
-
 
 
     render () {
@@ -92,21 +84,24 @@ fetch('http://localhost:3001/api/products/product/last')
 							count ={this.state.count}
 							categ ={this.state.categ}
 						/>
-						<div className="row">
-							{/* Last product comoponent */}
-							<LastProduct 
-							productTitle={this.state.lastProductTitle}
-							productDescription={this.state.lastProductDescription}
-							/>
+							{/* Last product component */}
+							<Card
+								title = "Detalle de último producto"
+							>
+								<div className="row">
+								<LastProduct
+									lastProduct={this.state.lastProduct}
+									/>
+									
+									</div>
+							</Card>
+							{/* /Last product component */}
 							
-							{/* /Last product comoponent */}
 							<Card 
 								title="Categorías"
 							>
 								<div className="row">
 									<Category />
-									
-
 								</div>
 							</Card>
 							
@@ -115,14 +110,12 @@ fetch('http://localhost:3001/api/products/product/last')
 							data={this.state.data}
 						/>
 					</div>
-				</div>
 	
 				<Footer />
 	
-			</div>
-			
-		);
-	}
+		</div>
+		);} 
+
 }
 
 export default Main;
