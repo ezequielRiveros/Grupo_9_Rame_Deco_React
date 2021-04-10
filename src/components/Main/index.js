@@ -8,8 +8,6 @@ import Metrics from './Metrics';
 import LastProduct from './LastProduct';
 
 
-// bootrap js
-import 'bootstrap/dist/js/bootstrap.min.js'
 
 
 class Main extends Component {
