@@ -84,27 +84,28 @@ class Main extends Component {
 							count ={this.state.count}
 							categ ={this.state.categ}
 						/>
+						<div className="middle-card">
 							{/* Last product component */}
 							<Card
 								title = "Detalle de último producto"
 							>
-								<div className="row">
 								<LastProduct
 									lastProduct={this.state.lastProduct}
 									/>
-									
-									</div>
+															
 							</Card>
+						
 							{/* /Last product component */}
-							
+						
 							<Card 
 								title="Categorías"
 							>
-								<div className="row">
+								
 									<Category />
-								</div>
+								
 							</Card>
-							
+
+						</div>
 						</div>
 						<Table 
 							data={this.state.data}
