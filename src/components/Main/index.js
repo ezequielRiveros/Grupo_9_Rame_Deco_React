@@ -101,7 +101,9 @@ class Main extends Component {
 								title="Categorías"
 							>
 								
+									<div className= "middle-card list-card"> 
 									<Category />
+									 </div>
 								
 							</Card>
 
