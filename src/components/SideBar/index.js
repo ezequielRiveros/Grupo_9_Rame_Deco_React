@@ -30,7 +30,7 @@ class SideBar extends React.Component {
 	
 				<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
 					<div className="sidebar-brand-icon">
-						<i className="fas fa-chart-line"></i>
+						<i className="fas fa-users-cog"></i>
 					</div>
 					<div className="sidebar-brand-text mx-3">Admin <br></br> RAMÉ DECO</div>
 				</a>

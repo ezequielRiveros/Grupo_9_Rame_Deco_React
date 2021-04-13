@@ -98,7 +98,7 @@ class Main extends Component {
 							{/* /Last product component */}
 						
 							<Card 
-								title="Cantidad de artículos por categoría"
+								title="Cantidad de artículos por categorías" 
 							>
 								
 									<div className= "middle-card list-card"> 
