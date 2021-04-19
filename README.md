@@ -4,7 +4,7 @@
 
 
 ## Website
-https://ramedecoo.herokuapp.com/userhome
+https://rame-deco-react.herokuapp.com/
 
 
 ## Available Scripts
